@@ -7,8 +7,8 @@ public class Car extends Vehicle {
     private int currentSpeed;
 
 
-    public Car(Engine carEngine, String transmissionType, boolean isTurboCharged, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int maxSpeed) {
-        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed);
+    public Car(Engine carEngine, String transmissionType, boolean isTurboCharged, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int cost, int maxSpeed) {
+        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
         this.carEngine = carEngine;
         this.TransmissionType = transmissionType;
         this.isTurboCharged = isTurboCharged;
@@ -42,7 +42,7 @@ public class Car extends Vehicle {
     }
 
     public String toString() {
-        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
+        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " can be yours for " + displayPrice() + " | ";
     }
 
     public void accelerate() {
