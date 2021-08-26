@@ -23,12 +23,17 @@ public class Car extends Vehicle {
 
 
     public void addPassenger(int numberOfPassengers) {
-        setNumberOfPassengers(getNumberOfPassengers() + numberOfPassengers);
+        if (numberOfPassengers < getMaxNumberOfPassengers()) {
+            setNumberOfPassengers(getNumberOfPassengers() + numberOfPassengers);
+            System.out.println("Passenger added successfully.");
+        } else {
+            System.out.println("There is not enough seating for that many passengers. The max amount of passengers is" + " " + getMaxNumberOfPassengers() + " Please try a different amount.");
+
+        }
     }
 
-    public void removePassenger() {
-
-        getNumberOfPassengers();
+    public void removePassenger(int numberOfPassengers) {
+        setNumberOfPassengers(getNumberOfPassengers() - numberOfPassengers);
     }
 
     public String toString() {

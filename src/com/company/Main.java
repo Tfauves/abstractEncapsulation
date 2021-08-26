@@ -24,7 +24,7 @@ At least two Abstract Methods
         Car myCar = new Car(fourCyl, "manual", true, "Chevy", "Sonic", "Black", 1, 4);
 
         System.out.println(myCar.toString());
-        myCar.addPassenger(2);
+        myCar.addPassenger(4);
         System.out.println(myCar.toString());
 
 
