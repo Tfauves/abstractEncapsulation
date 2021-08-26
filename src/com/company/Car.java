@@ -42,8 +42,7 @@ public class Car extends Vehicle {
     }
 
     public String toString() {
-        String outPut = " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
-        return outPut;
+        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
     }
 
     public void accelerate() {
