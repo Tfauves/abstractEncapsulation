@@ -6,8 +6,8 @@ public class Plane extends Vehicle{
     private int distanceOfTravel;
     private int currentSpeed;
 
-    public Plane(Engine planeEngine, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int maxSpeed, String directionOfTravel, int distanceOfTravel) {
-        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed);
+    public Plane(Engine planeEngine, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int maxSpeed, int cost, String directionOfTravel, int distanceOfTravel) {
+        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
         this.planeEngine = planeEngine;
         this.directionOfTravel = directionOfTravel;
         this.distanceOfTravel = distanceOfTravel;
@@ -40,8 +40,12 @@ public class Plane extends Vehicle{
         }
     }
 
+//    public String toString() {
+//        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
+//    }
+
     public String toString() {
-        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
+        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " can be yours for " + displayPrice() + " | ";
     }
 
     public void accelerate() {

@@ -4,8 +4,8 @@ public class Boat extends Vehicle{
     public Engine boatEngine;
     private int currentSpeed;
 
-    public Boat(Engine boatEngine, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int maxSpeed) {
-        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed);
+    public Boat(Engine boatEngine, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int cost, int maxSpeed) {
+        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
         this.boatEngine = boatEngine;
         currentSpeed = 0;
     }
@@ -36,8 +36,11 @@ public class Boat extends Vehicle{
         }
     }
 
+//    public String toString() {
+//        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
+//    }
     public String toString() {
-        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " has " + getNumberOfPassengers() + " passenger(s)" + " | ";
+        return " | The " + getColor() + " " + getManufacturer() + " " + getModel() + " can be yours for " + displayPrice() + " | ";
     }
 
     public void accelerate() {
