@@ -21,11 +21,18 @@ At least two Abstract Methods
         // write your code here
         Engine fourCyl = new Engine(false, "gas");
 
-        Car myCar = new Car(fourCyl, "manual", true, "Chevy", "Sonic", "Black", 1, 4);
+        Car myCar = new Car(fourCyl, "manual", true, "Chevy", "Sonic", "Black", 0, 4,110);
 
         System.out.println(myCar.toString());
-        myCar.addPassenger(4);
+        myCar.addPassenger(3);
+        myCar.removePassenger(1);
         System.out.println(myCar.toString());
+
+        myCar.carEngine.start();
+        myCar.accelerate();
+        myCar.accelerate();
+        myCar.brake();
+
 
 
 

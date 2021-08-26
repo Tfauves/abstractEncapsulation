@@ -24,4 +24,8 @@ public class Engine {
         }
     }
 
+    public boolean getIsOperating() {
+        return isOperating;
+    }
+
 }
