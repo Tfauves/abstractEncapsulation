@@ -21,7 +21,7 @@ public abstract class Vehicle {
 
     public abstract void addPassenger(int passengerQty);
 
-    public abstract void removePassenger();
+    public abstract void removePassenger(int passengerQty);
 
     public abstract String toString();
 
