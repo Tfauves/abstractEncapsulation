@@ -1,13 +1,13 @@
 package com.company;
 
 public class Plane extends Vehicle{
-    public Engine planeEngine;
+    private Engine planeEngine;
     private String directionOfTravel;
     private int distanceOfTravel;
     private int currentSpeed;
 
-    public Plane(Engine planeEngine, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int maxSpeed, int cost, String directionOfTravel, int distanceOfTravel) {
-        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
+    public Plane(Engine planeEngine, String manufacturer, String type, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int maxSpeed, int cost, String directionOfTravel, int distanceOfTravel) {
+        super(manufacturer, type, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
         this.planeEngine = planeEngine;
         this.directionOfTravel = directionOfTravel;
         this.distanceOfTravel = distanceOfTravel;

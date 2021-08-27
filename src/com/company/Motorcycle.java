@@ -1,11 +1,11 @@
 package com.company;
 
 public class Motorcycle extends Vehicle {
-    public Engine bikeEngine;
+    private Engine bikeEngine;
     private int currentSpeed;
 
-    public Motorcycle(Engine bikeEngine, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int cost, int maxSpeed) {
-        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
+    public Motorcycle(Engine bikeEngine, String manufacturer, String type, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int cost, int maxSpeed) {
+        super(manufacturer, type, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
         this.bikeEngine = bikeEngine;
         currentSpeed = 0;
 
