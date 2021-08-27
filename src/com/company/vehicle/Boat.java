@@ -1,6 +1,9 @@
-package com.company;
+package com.company.vehicle;
 
-public class Boat extends Vehicle{
+import com.company.Engine;
+import com.company.vehicle.Vehicle;
+
+public class Boat extends Vehicle {
     private Engine boatEngine;
     private int currentSpeed;
 

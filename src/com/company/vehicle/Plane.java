@@ -1,6 +1,9 @@
-package com.company;
+package com.company.vehicle;
 
-public class Plane extends Vehicle{
+import com.company.Engine;
+import com.company.vehicle.Vehicle;
+
+public class Plane extends Vehicle {
     private Engine planeEngine;
     private String directionOfTravel;
     private int distanceOfTravel;
