@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.vehicle.Boat;
+import com.company.vehicle.Car;
+import com.company.vehicle.Motorcycle;
+import com.company.vehicle.Plane;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -38,9 +43,6 @@ At least two Abstract Methods
         store01.displayInventory();
         store01.buyVehicle();
         store01.customerGarage.displayMyVehicles();
-//        System.out.println(store01.customerGarage.displayMyVehicles());
-
-
 
     }
 }

@@ -1,6 +1,7 @@
 package com.company;
 
-import java.text.NumberFormat;
+import com.company.vehicle.*;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
