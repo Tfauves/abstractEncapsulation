@@ -1,14 +1,14 @@
 package com.company;
 
 public class Car extends Vehicle {
-    public Engine carEngine;
+    private Engine carEngine;
     private String TransmissionType;
     private boolean isTurboCharged;
     private int currentSpeed;
 
 
-    public Car(Engine carEngine, String transmissionType, boolean isTurboCharged, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int cost, int maxSpeed) {
-        super(manufacturer, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
+    public Car(Engine carEngine, String transmissionType, String type, boolean isTurboCharged, String manufacturer, String model, String color, int numberOfPassengers, int maxNumberOfPassengers, int cost, int maxSpeed) {
+        super(manufacturer, type, model, color, numberOfPassengers, maxNumberOfPassengers, maxSpeed, cost);
         this.carEngine = carEngine;
         this.TransmissionType = transmissionType;
         this.isTurboCharged = isTurboCharged;
@@ -24,9 +24,9 @@ public class Car extends Vehicle {
     }
 
     public void addPassenger(int numberOfPassengers) {
-        if (numberOfPassengers < getMaxNumberOfPassengers()) {
+        if (numberOfPassengers <= getMaxNumberOfPassengers()) {
             setNumberOfPassengers(getNumberOfPassengers() + numberOfPassengers);
-            System.out.println("Passenger added successfully.");
+            System.out.println("Passenger added successfully. the current number of passengers " + getNumberOfPassengers());
         } else {
             System.out.println("There is not enough seating for that many passengers. The max amount of passengers is" + " " + getMaxNumberOfPassengers() + " Please try a different amount.");
 
@@ -36,6 +36,7 @@ public class Car extends Vehicle {
     public void removePassenger(int numberOfPassengers) {
         if (getNumberOfPassengers() != 0) {
             setNumberOfPassengers(getNumberOfPassengers() - numberOfPassengers);
+            System.out.println("the current number of passengers " + getNumberOfPassengers());
         } else {
             System.out.println("There are no passengers to remove");
         }
